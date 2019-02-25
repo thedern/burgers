@@ -63,10 +63,13 @@
                     </thead>
                     <tbody>
                     {{#each burgers}}
-                        <tr>
-                            <td class="data-name">{{burger_name}}</td>
-                            <td><a href="#" id="devour-btn" class="btn btn-danger btn-sm" role="button">Devour Me</a></td>
-                        </tr>
+                        <!-- unless is the same as !devoured -->
+                        {{#unless devoured}}
+                            <tr>
+                                <td class="data-name">{{burger_name}}</td>
+                                <td><a href="#" id="devour-btn" class="btn btn-danger btn-sm" role="button">Devour Me</a></td>
+                            </tr>
+                        {{/unless}}
                     {{/each}} <!-- end block -->
                     </tbody>
                 </table>
@@ -83,7 +86,17 @@
                         </tr>
                     </thead>
                     <tbody>
-                    
+                        <tr>
+                            {{#each burgers}}
+                            <!-- unless is the same as !devoured -->
+                                {{#if devoured}}
+                                <tr>
+                                    <td class="data-name">{{burger_name}}</td>
+                                    <td>yes</td>
+                                </tr>
+                                {{/if}}
+                            {{/each}} <!-- end block -->
+                        </tr>
                     </tbody>
                 </table>
             </div> <!-- end second column -->
