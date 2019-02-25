@@ -1,0 +1,92 @@
+<div class="container">
+    <!-- Jumbotron -->
+
+    <div class="jumbotron text-center mt-3">
+        <h1 class="diplay-4 text-success pb-3">Annoying New Age Hambugers</h1>
+        <p class="lead">Order Burger By Name Below or Enter the Name of a Custom Burger</p>
+        <h2 class="m-3">Menu</h2>
+        <div class="container">
+            <div class="menu-group mt-3 mb-5 p-5">
+                <div class="row">
+                    <div class="col-md-4">
+                        <img class="burgerImg" src="/yoga.png" alt="hamburger">
+                    </div>
+                    <div class="col-md-4">
+                        <ul class="burger-menu text-left list-group">
+                            <li class="list-group-item list-group-item-success">Burger of Wisdom</li>
+                            <li class="list-group-item list-group-item-success">Burger of Anger</li>
+                            <li class="list-group-item list-group-item-success">Burger of Tranquility</li>
+                            <li class="list-group-item list-group-item-success">Burger of Enlightenment</li>
+                            <li class="list-group-item list-group-item-success">Burger of your Dead Ancestors</li>
+                            <li class="list-group-item list-group-item-success">Burger of Awesomeness</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <ul class="burger-menu text-left list-group">
+                            <li class="list-group-item list-group-item-success">Burger of Spirituality</li>
+                            <li class="list-group-item list-group-item-success">Burger of Sadness</li>
+                            <li class="list-group-item list-group-item-success">Burger of Burger of Circular Logic</li>
+                            <li class="list-group-item list-group-item-success">Burger of Solar Energy</li>
+                            <li class="list-group-item list-group-item-success">Burger of Vegtables No One Likes</li>
+                            <li class="list-group-item list-group-item-success">Burger of Compassion</li>
+                        </ul>
+                    </div>
+
+                </div> <!-- end row -->
+            </div> <!-- end menu-group -->
+        </div> <!-- end container -->
+        
+        <form>
+            <div class="form-group">
+                <label for="name"><h3>Order Here</h3></label>
+                <input class="form-control" type="text" id="name" placeholder="Burger Name">
+            </div>
+        </form>
+        <a href="#" class="btn btn-success btn-lg" role="button">Order Burger</a>
+    </div>
+</div> <!-- end container -->
+<!-- two column layout -->
+
+<!-- Burgers Ordered Column -->
+<div class="container mb-3">
+    <div class="tables-group mb-5 p-5">
+        <div class="row">
+            <div class="col-md-6 orderd">
+                <h2 class="mb-3">Uneaten Burgers</h2>
+                <!-- burger table -->
+                <table id="burger-table" class="table table-borderless">
+                    <thead>
+                        <tr>
+                            <th>Burger Name</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    {{#each burgers}}
+                        <tr>
+                            <td class="data-name">{{burger_name}}</td>
+                            <td><a href="#" id="devour-btn" class="btn btn-danger btn-sm" role="button">Devour Me</a></td>
+                        </tr>
+                    {{/each}} <!-- end block -->
+                    </tbody>
+                </table>
+            </div> <!-- end first column -->
+
+            <!-- Devoured Column -->
+            <div class="col-md-6 devoured">
+                <h2 class="mb-3">Devoured Burgers</h2>
+                <table id="devoured-table" class="table table-borderless">
+                    <thead>
+                        <tr>
+                            <th>Burger Name</th>
+                            <th>Eaten!</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    
+                    </tbody>
+                </table>
+            </div> <!-- end second column -->
+        </div> <!-- end row -->
+    </div> <!-- tables group -->
+</div> <!-- end conatiner -->

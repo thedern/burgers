@@ -1,0 +1,36 @@
+
+body {
+    background-image: url('./bamboo.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 1.25rem;
+    letter-spacing: 1.25px;
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+h2 {
+    font-size: 3rem;
+}
+
+h3 {
+    font-size: 2rem;
+}
+
+.menu-group {
+    background-color: #e8f5e9;
+    border: 2px solid #2e7d32;  
+}
+
+.burgerImg {
+    border: 2px solid #2e7d32;
+}
+
+.tables-group {
+    background-color: #c8e6c9;
+}
+
+
