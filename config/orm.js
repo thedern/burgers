@@ -27,7 +27,8 @@ const orm = {
 
     // insert one burger
     insertOne: function(table, col, val, cb) {
-        //insert into burgers (burger_name, devoured) values ('burger of truth', true);
+        // insert into burgers (burger_name, devoured) values ('burger of truth', true);
+        // console.log('in insertOne');
         let queryString = "INSERT INTO ?? (??) VALUES (?)";
         connection.query(queryString,[table, col, val], (err, result) => {
             if (err) {

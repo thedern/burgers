@@ -39,16 +39,17 @@
         <form>
             <div class="form-group">
                 <label for="name"><h3>Order Here</h3></label>
-                <input class="form-control" type="text" id="name" placeholder="Burger Name">
+                <input class="form-control" type="text" id="burger-name" placeholder="Burger Name">
             </div>
         </form>
-        <a href="#" class="btn btn-success btn-lg" role="button">Order Burger</a>
+        <button id="submit-burger" class="btn btn-success btn-lg" type="button">Order Burger</button>
     </div>
 </div> <!-- end container -->
 <!-- two column layout -->
 
 <!-- Burgers Ordered Column -->
 <div class="container mb-3">
+    <!-- change this to columns of lists; see traversy -->
     <div class="tables-group mb-5 p-5">
         <div class="row">
             <div class="col-md-6 orderd">
@@ -67,7 +68,7 @@
                         {{#unless devoured}}
                             <tr>
                                 <td class="data-name">{{burger_name}}</td>
-                                <td><a href="#" id="devour-btn" class="btn btn-danger btn-sm" role="button">Devour Me</a></td>
+                                <td><button id="devour" class="btn btn-danger btn-sm" type="button">Devour Me</button></td>
                             </tr>
                         {{/unless}}
                     {{/each}} <!-- end block -->
