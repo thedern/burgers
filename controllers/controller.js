@@ -21,9 +21,10 @@ router.get('/', (req, resp) => {
 });
 
 router.post('/api/burgers', (req, resp) => {
-    // gets burger's name from request body
+    console.log(req.body.name);
+    //gets burger's name from request body
     burgerSQL.insertOne(req.body.name, (result) => {
-        console.log({ name:  result.burger_name});
+        console.log(result);
         // will need to update page col with this and add devour button
     });
 });
