@@ -20,20 +20,29 @@ router.get('/', (req, resp) => {
     });
 });
 
-router.post('/api/burgers', (req, resp) => {
-    console.log(req.body.name);
+// router.post('/api/burgers', (req, resp) => {
+//     console.log(req.body.name);
+//     //gets burger's name from request body
+//     burgerSQL.insertOne(req.body.name, (result) => {
+//         console.log(result);
+//         // will need to update page col with this and add devour button
+//     });
+// });
+
+router.post('/api/burgers/:burger', (req, resp) => {
+    console.log(req.params.burger);
     //gets burger's name from request body
-    burgerSQL.insertOne(req.body.name, (result) => {
+    burgerSQL.insertOne(req.params.burger, (result) => {
         console.log(result);
         // will need to update page col with this and add devour button
     });
 });
 
 router.put('/api/burgers/:burger', (req, resp) => {
+    console.log(req.params.burger);
     // update burger that has been devoured
-    // devour button pass the burger name in URL?????
-    burgerSQL.updateOne(req.params.id, (result) => {
-        console.log({ devoured: result.devoured})
+    burgerSQL.updateOne(req.params.burger, (result) => {
+        console.log(result)
     });
 });
 

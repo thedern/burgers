@@ -50,56 +50,31 @@
 <!-- Burgers Ordered Column -->
 <div class="container mb-3">
     <!-- change this to columns of lists; see traversy -->
-    <div class="tables-group mb-5 p-5">
+    <div class="results-group mb-5 p-5">
         <div class="row">
-            <div class="col-md-6 orderd">
+            <div class="col-md-6 ordered"> <!-- ordered column -->
                 <h2 class="mb-3">Uneaten Burgers</h2>
-                <!-- burger table -->
-                <table id="burger-table" class="table table-borderless">
-                    <thead>
-                        <tr>
-                            <th>Burger Name</th>
-                            <th></th>
-                        </tr>
-                    </thead>
-                    <tbody>
+                <p>Click on Burger in Order to Eat It &#40; ...spiritually&#41;</p>
+                <ul class="ordered-burgers text-left list-group">
                     {{#each burgers}}
-                        <!-- unless is the same as !devoured -->
                         {{#unless devoured}}
-                            <tr>
-                                <td class="data-name">{{burger_name}}</td>
-                                <td><button id="devour" class="btn btn-danger btn-sm" type="button">Devour Me</button></td>
-                            </tr>
+                            <li class="list-group-item list-group-item-secondary">{{burger_name}}</li>
                         {{/unless}}
-                    {{/each}} <!-- end block -->
-                    </tbody>
-                </table>
-            </div> <!-- end first column -->
+                    {{/each}}
+                </ul>
+            </div> <!-- end ordered column -->
 
             <!-- Devoured Column -->
             <div class="col-md-6 devoured">
                 <h2 class="mb-3">Devoured Burgers</h2>
-                <table id="devoured-table" class="table table-borderless">
-                    <thead>
-                        <tr>
-                            <th>Burger Name</th>
-                            <th>Eaten!</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            {{#each burgers}}
-                            <!-- unless is the same as !devoured -->
-                                {{#if devoured}}
-                                <tr>
-                                    <td class="data-name">{{burger_name}}</td>
-                                    <td>yes</td>
-                                </tr>
-                                {{/if}}
-                            {{/each}} <!-- end block -->
-                        </tr>
-                    </tbody>
-                </table>
+                <p>Your Mana has Been Altered or ...Something ...Words</p>
+                <ul class="devoured-burgers text-left list-group">
+                    {{#each burgers}}
+                        {{#if devoured}}
+                            <li class="list-group-item list-group-item-danger">{{burger_name}}</li>
+                        {{/if}}
+                    {{/each}}
+                </ul>
             </div> <!-- end second column -->
         </div> <!-- end row -->
     </div> <!-- tables group -->

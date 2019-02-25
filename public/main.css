@@ -29,8 +29,13 @@ h3 {
     border: 2px solid #2e7d32;
 }
 
-.tables-group {
+.results-group {
     background-color: #c8e6c9;
+}
+
+.ordered-burgers li:hover {
+    background-color: #1b5e20;
+    color: #fff;
 }
 
 
