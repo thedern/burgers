@@ -19,7 +19,7 @@ const burgerSQL = {
 
     // burger's name
     updateOne : function(name, cb) {
-        orm.updateOne('burgers', 'devoured', false, 'burger_name', name, (res) => {
+        orm.updateOne('burgers', 'devoured', true, 'burger_name', name, (res) => {
             cb(res);
         });
     }
