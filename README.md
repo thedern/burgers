@@ -1,5 +1,5 @@
-#Burgers#
-##MVC application using hamburgers##
+# Burgers
+## MVC application using hamburgers
 
 * The user will enter a hambuger in the text box and click the **order** button
 * That hamburger will then be added to the myqsl database and be added to the left-hand column on the screen
