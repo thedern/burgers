@@ -1,14 +1,15 @@
-// Database Connection
+require('dotenv').config();
 
 // create DB connection
 const mysql = require('mysql');
 const connection = mysql.createConnection({
-    host: localhost,
+    host: "localhost",
     port: 3306,
     user: "root",
-    database: "burgers_db",
-    password: process.env.mysql_passwd
-})
+    //password: process.env.mysql_passwd,
+    password: "MYSQL4thewin!",
+    database: "burgers_db"
+});
 
 // test DB connection
 connection.connect((err) => {

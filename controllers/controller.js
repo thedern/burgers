@@ -2,7 +2,7 @@
 
 // requires
 const express = require('express');
-const burgerSQL = require('../model/burger')
+const burgerSQL = require('../models/burger')
 
 // create express router
 const router = express.Router();
@@ -11,11 +11,12 @@ const router = express.Router();
 router.get('/', (req, resp) => {
     burgerSQL.selectAll((data) => {
         // handlebars object
-        var hbsOject = {
+        var hbsObject = {
+            // this worked all data pulled 2/25!!!
             burgers : data
         };
         console.log(hbsObject);
-        //resp.render("index", hbsObject);
+        resp.render("index", hbsObject);
     });
 });
 
